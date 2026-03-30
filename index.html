@@ -4,48 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        body, html {
             margin: 0;
-            padding: 20px;
-            color: white;
-            background-color: blue;
-            font-family: sans-serif;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
         }
 
         .container {
             display: flex;
-            gap: 20px; /* Spazio tra i due iframe */
-            height: 80vh; /* Altezza del contenitore */
+            width: 100vw;
+            height: 100vh;
         }
 
         iframe {
-            flex: 1; /* Divide lo spazio equamente */
+            flex: 1;
             width: 100%;
-            border: 2px solid #ccc;
-            border-radius: 8px;
+            height: 100%;
+            border: none;
         }
 
-        /* Regola per mobile (iOS e altri smartphone) */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Dispone gli elementi in verticale */
+                flex-direction: column;
                 height: auto;
             }
 
             iframe {
-                height: 400px; /* Altezza fissa quando sono impilati */
+                height: 50vh; /* Ogni iframe prende metà altezza schermo su mobile */
+                min-height: 300px;
             }
         }
     </style>
 </head>
 <body>
 
-    <h2>Hyper42 AI Deterministic</h2>
-
     <div class="container">
         <iframe src="https://gqqhfd4g5qkxfmw73tf3sl4vgm0htxff.lambda-url.eu-central-1.on.aws/prompt.html" title="Item"></iframe>
         <iframe src="https://gqqhfd4g5qkxfmw73tf3sl4vgm0htxff.lambda-url.eu-central-1.on.aws/formula.html" title="Formula"></iframe>
     </div>
+
 
 </body>
 </html>
