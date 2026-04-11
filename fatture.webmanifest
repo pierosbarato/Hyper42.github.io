@@ -2,7 +2,7 @@
     "theme_color": "#1266f1",
     "background_color": "#1266f1",
     "display": "standalone",
-    "scope": "/fatture.html",
+    "scope": "/index.html",
     "name": "Fatture",
     "short_name": "Fatture",
     "icons": [
